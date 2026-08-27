@@ -1,0 +1,101 @@
+MIGRACIÓN SEO DE ORVIS.COM.AR A EFLYSHOP.COM.AR
+
+1. No elimines ni dejes vencer el dominio orvis.com.ar.
+2. Hacé una copia completa de los archivos actuales.
+3. Exportá desde Search Console el rendimiento y los enlaces de orvis.com.ar.
+4. Subí EL CONTENIDO de la carpeta SUBIR-A-PUBLIC_HTML a la raíz pública del dominio.
+5. Es fundamental que también se suba el archivo oculto .htaccess.
+6. Todas las variantes (http, https, con www y sin www) deben apuntar a este hosting.
+7. Conservá el certificado SSL del dominio.
+8. Verificá los tres resultados indicados en mapa-redirecciones.csv.
+9. Luego utilizá Cambio de dirección en Search Console: orvis.com.ar → eflyshop.com.ar.
+10. Mantené estas redirecciones durante varios años; idealmente, de manera indefinida.
+
+DESTINO TRANSITORIO DE FABRICACIÓN
+
+La página canas-orvis-made-in-usa.html se dirige actualmente a la categoría de
+cañas Orvis. Para conservar todavía más relevancia, conviene publicar primero
+el artículo completo dentro de eflyshop. Cuando exista, reemplazá solamente la
+URL de destino de esa regla en .htaccess. La redirección debe ir directamente
+a la URL final, sin pasar por la categoría intermedia.
+
+NO REDIRECCIONAR TODAS LAS URL A LA HOME
+
+Las URL sin equivalencia devuelven 410. Antes de la subida definitiva, revisá
+en Search Console si existen otras URL antiguas con tráfico o enlaces. Si las
+hay, agregales una redirección específica antes de la regla final 410.
+
+
+
+
+------
+
+
+Orden correcto para activar la migración
+Seguí este orden:
+1. Corregí todos los enlaces internos de las tres páginas nuevas.
+2. Regenerá el sitemap de PrestaShop.
+3. Confirmá que las tres páginas nuevas aparecen en el sitemap.
+4. Verificá que las páginas nuevas no tengan noindex.
+5. Verificá el canonical de cada página.
+6. Hacé una copia del .htaccess actual de orvis.com.ar.
+7. Subí el nuevo .htaccess.
+8. Subí robots.txt.
+9. Subí sitemap.xml.
+10. Si orvis.com.ar está detrás de Cloudflare, purgá la caché.
+11. Probá las redirecciones.
+12. Recién después realizá el cambio de dirección en Search Console.
+8. Cómo probar las redirecciones
+Abrí estas URLs en una ventana privada:
+http://orvis.com.ar/
+https://orvis.com.ar/
+http://www.orvis.com.ar/
+https://www.orvis.com.ar/
+
+https://www.orvis.com.ar/canas-orvis-made-in-usa.html
+https://www.orvis.com.ar/orvis-helios-4-argentina.html
+Todas deben llegar directamente a su página correspondiente en eflyshop.
+No deben:
+- Pasar primero por otra URL de orvis.com.ar.
+- Mostrar una página HTML intermedia.
+- Usar JavaScript o meta refresh.
+- Producir dos redirecciones consecutivas.
+- Terminar en la página inglesa de eflyshop.
+Podés comprobar el estado HTTP con:
+curl -I https://www.orvis.com.ar/
+El resultado debe contener:
+HTTP/2 301
+location: https://www.eflyshop.com.ar/ag/content/orvis-argentina/9
+Y para las otras dos:
+curl -I https://www.orvis.com.ar/canas-orvis-made-in-usa.html
+curl -I https://www.orvis.com.ar/orvis-helios-4-argentina.html
+9. Google Search Console
+Necesitás tener verificadas con la misma cuenta:
+- La propiedad de dominio orvis.com.ar.
+- La propiedad de dominio eflyshop.com.ar.
+- Si existen como propiedades separadas, las variantes www y sin www.
+Después:
+1. Entrá a la propiedad orvis.com.ar.
+2. Abrí Configuración.
+3. Seleccioná Cambio de dirección.
+4. Elegí como destino eflyshop.com.ar.
+5. Ejecutá las comprobaciones.
+6. Confirmá la migración.
+Google permite trasladar un dominio completo hacia una ruta dentro de otro dominio; la herramienta se configura a nivel de propiedad y las redirecciones individuales indican la correspondencia concreta de cada página. Ayuda oficial de Cambio de dirección.
+Luego:
+- En la propiedad antigua, enviá https://www.orvis.com.ar/sitemap.xml.
+- En la propiedad nueva, regenerá y enviá el sitemap de eflyshop.
+- Usá Inspección de URL sobre las tres URLs nuevas.
+- Solicitá indexación para las tres páginas nuevas.
+- Inspeccioná también las tres URLs viejas y verificá que Google detecte la redirección.
+10. Después de la migración
+Durante las semanas siguientes:
+- Revisá en Search Console las impresiones de ambos dominios.
+- Comprobá que disminuyan las URLs indexadas de orvis.com.ar.
+- Comprobá que aumenten impresiones y clics de las páginas nuevas.
+- Revisá errores 404, redirecciones y canonical.
+- Actualizá enlaces de Facebook, Instagram, Google Business Profile y otros perfiles.
+- Pedí actualizar los enlaces externos importantes que todavía apunten a orvis.com.ar.
+- No cambies nuevamente títulos, textos o estructura durante las primeras semanas.
+- No des de baja el dominio, el certificado SSL ni el hosting anterior.
+Google recomienda mantener las redirecciones durante al menos un año y considera conveniente conservarlas indefinidamente. También advierte que pueden existir fluctuaciones temporales mientras vuelve a rastrear y procesar las URLs. Recomendaciones oficiales de Google.

@@ -1,0 +1,65 @@
+RewriteEngine On
+
+# =========================================================
+# MIGRACIÓN ORVIS.COM.AR → EFLYSHOP.COM.AR
+# Redirecciones permanentes 301
+# =========================================================
+
+# Página: Cañas Orvis hechas en Estados Unidos
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^canas-orvis-made-in-usa\.html/?$ https://www.eflyshop.com.ar/ag/content/canas-orvis-hechas-en-usa/11 [R=301,L,NE,QSD]
+
+# Página: Orvis Helios 4 en Argentina
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^orvis-helios-4-argentina\.html/?$ https://www.eflyshop.com.ar/ag/content/orvis-helios-4-argentina/10 [R=301,L,NE,QSD]
+
+# Portada principal
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^$ https://www.eflyshop.com.ar/ag/content/orvis-argentina/9 [R=301,L,NE,QSD]
+
+# Posibles accesos antiguos a index.html, index.htm o index.php
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^index\.(?:html?|php)$ https://www.eflyshop.com.ar/ag/content/orvis-argentina/9 [R=301,L,NE,QSD]
+
+# =========================================================
+# REDIRECCIÓN DE IMÁGENES
+# =========================================================
+
+# Portada
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^img/hero-orvis-argentina\.webp$ https://www.eflyshop.com.ar/img/cms/orvis/hero-orvis-argentina.webp [R=301,L,NE,QSD]
+
+# Fabricación de cañas
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^img/hero-fabrica-orvis\.webp$ https://www.eflyshop.com.ar/img/cms/orvis/hero-fabrica-orvis.webp [R=301,L,NE,QSD]
+
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^img/fabricacion-canas-orvis\.webp$ https://www.eflyshop.com.ar/img/cms/orvis/fabricacion-canas-orvis.webp [R=301,L,NE,QSD]
+
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^img/proceso-cana-orvis\.webp$ https://www.eflyshop.com.ar/img/cms/orvis/proceso-cana-orvis.webp [R=301,L,NE,QSD]
+
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^img/detalle-cana-orvis\.webp$ https://www.eflyshop.com.ar/img/cms/orvis/detalle-cana-orvis.webp [R=301,L,NE,QSD]
+
+# Helios 4
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^img/helios-hero\.webp$ https://www.eflyshop.com.ar/img/cms/orvis/helios-hero.webp [R=301,L,NE,QSD]
+
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^img/helios-2024-lp-tracking\.webp$ https://www.eflyshop.com.ar/img/cms/orvis/helios-2024-lp-tracking.webp [R=301,L,NE,QSD]
+
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^img/4X_accurate_graphic_long\.webp$ https://www.eflyshop.com.ar/img/cms/orvis/4X_accurate_graphic_long.webp [R=301,L,NE,QSD]
+
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^img/helios-2024-tip-3\.webp$ https://www.eflyshop.com.ar/img/cms/orvis/helios-2024-tip-3.webp [R=301,L,NE,QSD]
+
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^img/helios-2024-lp-deflection\.webp$ https://www.eflyshop.com.ar/img/cms/orvis/helios-2024-lp-deflection.webp [R=301,L,NE,QSD]
+
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^img/25_stronger_graphic\.webp$ https://www.eflyshop.com.ar/img/cms/orvis/25_stronger_graphic.webp [R=301,L,NE,QSD]
+
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^img/helios-2024-lp-f-d-3\.webp$ https://www.eflyshop.com.ar/img/cms/orvis/helios-2024-lp-f-d-3.webp [R=301,L,NE,QSD]
