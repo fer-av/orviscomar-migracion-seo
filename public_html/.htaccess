@@ -63,3 +63,11 @@ RewriteRule ^img/25_stronger_graphic\.webp$ https://www.eflyshop.com.ar/img/cms/
 
 RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
 RewriteRule ^img/helios-2024-lp-f-d-3\.webp$ https://www.eflyshop.com.ar/img/cms/orvis/helios-2024-lp-f-d-3.webp [R=301,L,NE,QSD]
+
+# =========================================================
+# REDIRECCIÓN DE orvis.ar -> orvis.com.ar
+# =========================================================
+
+RewriteCond %{HTTP_HOST} ^orvis\.ar$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.orvis\.ar$
+RewriteRule ^/?$ "https\:\/\/www\.orvis\.com\.ar\/" [R=301,L]
