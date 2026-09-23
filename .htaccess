@@ -14,21 +14,22 @@ RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
 RewriteRule ^orvis-helios-4-argentina\.html/?$ https://www.eflyshop.com.ar/ag/content/orvis-helios-4-argentina/10 [R=301,L,NE,QSD]
 
 # Portada principal
-#RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
-#RewriteRule ^$ https://www.eflyshop.com.ar/ag/content/orvis-argentina/9 [R=301,L,NE,QSD]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^$ https://www.eflyshop.com.ar/ag/content/orvis-argentina/9 [R=301,L,NE,QSD]
 
 # Posibles accesos antiguos a index.html, index.htm o index.php
-#RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
-#RewriteRule ^index\.(?:html?|php)$ https://www.eflyshop.com.ar/ag/content/orvis-argentina/9 [R=301,L,NE,QSD]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+RewriteRule ^index\.(?:html?|php)$ https://www.eflyshop.com.ar/ag/content/orvis-argentina/9 [R=301,L,NE,QSD]
 
+#---------------------------------
 # La portada de orvis.com.ar permanece activa.
 # No colocar ninguna redirección para ^$
 
 # Unificar index.html, index.htm e index.php con la portada de Orvis
-RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
-RewriteCond %{THE_REQUEST} "\s/+index\.(?:html?|php)(?:[?\s])" [NC]
-RewriteRule ^index\.(?:html?|php)$ https://www.orvis.com.ar/ [R=301,L,NE,QSD]
-
+#RewriteCond %{HTTP_HOST} ^(?:www\.)?orvis\.com\.ar$ [NC]
+#RewriteCond %{THE_REQUEST} "\s/+index\.(?:html?|php)(?:[?\s])" [NC]
+#RewriteRule ^index\.(?:html?|php)$ https://www.orvis.com.ar/ [R=301,L,NE,QSD]
+#-------------------------------
 
 # =========================================================
 # REDIRECCIÓN DE IMÁGENES
